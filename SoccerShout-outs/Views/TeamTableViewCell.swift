@@ -86,15 +86,15 @@ class TeamTableViewCell: UITableViewCell {
         buttonPlay.layer.cornerRadius = 20
     }
     
-    func configure() {
-        contentView.backgroundColor = TeamType.arsenal.background
+    func configure(with item: Team) {
+        contentView.backgroundColor = item.id.background
        
-        iconImageView.image = TeamType.arsenal.badge
-        buttonPlay.setImage(UIImage(systemName: "play.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32)), for: .normal)
-        nameLable.text = "Arsenal"
-        founderLable.text = "1999"
-        jobLable.text = "Current Manager: HZ"
-        infoLable.text = "In late 1886, a gaggle of workers from the Woolwich Arsenal Armament Factory decided to form a football team. They called themselves Dial Square as a reference to the sundial atop the entrance to the factory."
+        iconImageView.image = item.id.badge
+        buttonPlay.setImage(item.isPlaing ? Assets.pause : Assets.play, for: .normal)
+        nameLable.text = item.name
+        founderLable.text = item.founded
+        jobLable.text = "Current \(item.manager.job.rawValue), \(item.manager.name)"
+        infoLable.text = item.info
         
         //added a representation of the container in the box
         self.contentView.addSubview(conteinertView)

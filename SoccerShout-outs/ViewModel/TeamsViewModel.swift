@@ -8,7 +8,7 @@
 import Foundation
 
 class TeamsViewModel {
-    private var teams: [Team] = [
+    private(set) var teams: [Team] = [
         Team(id: .arsenal,
              name: "Arsenal",
              info: "Arsenal profession footbal club",

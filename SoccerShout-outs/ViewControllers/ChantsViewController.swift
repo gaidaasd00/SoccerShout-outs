@@ -23,6 +23,8 @@ class ChantsViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var teamsViewModel = TeamsViewModel()
+    
     
     // MARK: - Lyfecycle
     //make adjustments more efficiently UI
@@ -61,12 +63,13 @@ extension ChantsViewController {
 //MARK: - UITableViewDataSource
 extension ChantsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return teamsViewModel.teams.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cell, for: indexPath) as! TeamTableViewCell
-        cell.configure()
+        let team = teamsViewModel.teams[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cell, for: indexPath) as? TeamTableViewCell else { return UITableViewCell()}
+        cell.configure(with: team)
         return cell
     }
 }
