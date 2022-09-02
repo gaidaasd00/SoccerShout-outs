@@ -34,12 +34,16 @@ class ChantsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        self.view.backgroundColor = .systemPink
+        self.view.backgroundColor = .white
     }
 }
     // MARK: - Extension
 extension ChantsViewController {
     func setup() {
+        //Setting navigationViewController
+        navigationController?.navigationBar.topItem?.title = "Football Shout-outs"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         //allows you to return the data we want to see on the screen
         tableView.dataSource = self
         
