@@ -36,6 +36,7 @@
 		CC3DF19428C1111E005FEAB6 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DF19328C1111E005FEAB6 /* Team.swift */; };
 		CC3DF19628C111D2005FEAB6 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DF19528C111D2005FEAB6 /* Manager.swift */; };
 		CC3DF19928C113A3005FEAB6 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DF19828C113A3005FEAB6 /* TeamsViewModel.swift */; };
+		CC6574CA28C2580B00928390 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6574C928C2580B00928390 /* TeamTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		CC3DF19328C1111E005FEAB6 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		CC3DF19528C111D2005FEAB6 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		CC3DF19828C113A3005FEAB6 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		CC6574C928C2580B00928390 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		CC3DF14E28C0FD6C005FEAB6 /* SoccerShout-outs */ = {
 			isa = PBXGroup;
 			children = (
+				CC6574C828C257EF00928390 /* Views */,
 				CC3DF19728C11374005FEAB6 /* ViewModel */,
 				CC3DF19228C11111005FEAB6 /* Models */,
 				CC3DF18F28C10672005FEAB6 /* ViewControllers */,
@@ -174,6 +177,14 @@
 				CC3DF19828C113A3005FEAB6 /* TeamsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CC6574C828C257EF00928390 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC6574C928C2580B00928390 /* TeamTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 				CC3DF19928C113A3005FEAB6 /* TeamsViewModel.swift in Sources */,
 				CC3DF19628C111D2005FEAB6 /* Manager.swift in Sources */,
 				CC3DF18C28C103A4005FEAB6 /* Teams.swift in Sources */,
+				CC6574CA28C2580B00928390 /* TeamTableViewCell.swift in Sources */,
 				CC3DF15028C0FD6C005FEAB6 /* AppDelegate.swift in Sources */,
 				CC3DF19428C1111E005FEAB6 /* Team.swift in Sources */,
 				CC3DF15228C0FD6C005FEAB6 /* SceneDelegate.swift in Sources */,
@@ -427,6 +439,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +468,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
