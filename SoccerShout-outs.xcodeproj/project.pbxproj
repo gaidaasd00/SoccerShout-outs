@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC142C3228C512A900015E79 /* AudioManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC142C3128C512A900015E79 /* AudioManagerViewModel.swift */; };
 		CC3DF15028C0FD6C005FEAB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DF14F28C0FD6C005FEAB6 /* AppDelegate.swift */; };
 		CC3DF15228C0FD6C005FEAB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3DF15128C0FD6C005FEAB6 /* SceneDelegate.swift */; };
 		CC3DF15728C0FD6C005FEAB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3DF15528C0FD6C005FEAB6 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC142C3128C512A900015E79 /* AudioManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManagerViewModel.swift; sourceTree = "<group>"; };
 		CC3DF14C28C0FD6C005FEAB6 /* SoccerShout-outs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoccerShout-outs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3DF14F28C0FD6C005FEAB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC3DF15128C0FD6C005FEAB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3DF19828C113A3005FEAB6 /* TeamsViewModel.swift */,
+				CC142C3128C512A900015E79 /* AudioManagerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				CC3DF19628C111D2005FEAB6 /* Manager.swift in Sources */,
 				CC3DF18C28C103A4005FEAB6 /* Teams.swift in Sources */,
 				CC6574CA28C2580B00928390 /* TeamTableViewCell.swift in Sources */,
+				CC142C3228C512A900015E79 /* AudioManagerViewModel.swift in Sources */,
 				CC3DF15028C0FD6C005FEAB6 /* AppDelegate.swift in Sources */,
 				CC3DF19428C1111E005FEAB6 /* Team.swift in Sources */,
 				CC3DF15228C0FD6C005FEAB6 /* SceneDelegate.swift in Sources */,

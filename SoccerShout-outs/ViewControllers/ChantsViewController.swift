@@ -24,6 +24,7 @@ class ChantsViewController: UIViewController {
     }()
     
     private lazy var teamsViewModel = TeamsViewModel()
+    private lazy var audioManagerViewModel = AudioManagerViewModel()
     
     
     // MARK: - Lyfecycle
@@ -77,6 +78,7 @@ extension ChantsViewController: UITableViewDataSource {
 
 extension ChantsViewController: TeamTableViewCellDelegate {
     func didTapPlayback(for team: Team) {
+        audioManagerViewModel.playback(team)
         teamsViewModel.togglePlayback(for: team)
         tableView.reloadData()
     }
