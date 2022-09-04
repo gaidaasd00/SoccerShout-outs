@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TeamTableViewCellDelegate: class {
+    func didTapPlayback(for team: Team)
+}
+
 class TeamTableViewCell: UITableViewCell {
     
     static let cell = "TeamTableViewCell"
@@ -79,6 +83,10 @@ class TeamTableViewCell: UITableViewCell {
         return infoLable
     }()
     
+    //delegate
+    private weak var delegate: TeamTableViewCellDelegate?
+    private var team: Team?
+    
     //MARK: - LifeCycle
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -86,7 +94,20 @@ class TeamTableViewCell: UITableViewCell {
         buttonPlay.layer.cornerRadius = 20
     }
     
-    func configure(with item: Team) {
+    // clean state cell
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.team = nil
+        self.delegate = nil
+        self.contentView.subviews.forEach{$0.removeFromSuperview()}
+    }
+    
+    func configure(with item: Team, delegate: TeamTableViewCellDelegate ) {
+        self.team = item
+        self.delegate = delegate
+        
+        //addTarget
+        buttonPlay.addTarget(self, action: #selector(didTapPlayback), for:.touchUpInside )
         contentView.backgroundColor = item.id.background
        
         iconImageView.image = item.id.badge
@@ -130,5 +151,11 @@ class TeamTableViewCell: UITableViewCell {
             buttonPlay.centerYAnchor.constraint(equalTo: conteinertView.centerYAnchor)
             
         ])
+    }
+    @objc func didTapPlayback() {
+        if let team = team {
+            delegate?.didTapPlayback(for: team)
+            print("is selected \(team.name)")
+        }
     }
 }

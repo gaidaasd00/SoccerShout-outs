@@ -39,6 +39,7 @@ class ChantsViewController: UIViewController {
         self.view.backgroundColor = .white
     }
 }
+
     // MARK: - Extension
 extension ChantsViewController {
     func setup() {
@@ -69,7 +70,15 @@ extension ChantsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let team = teamsViewModel.teams[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cell, for: indexPath) as? TeamTableViewCell else { return UITableViewCell()}
-        cell.configure(with: team)
+        cell.configure(with: team, delegate: self)
         return cell
     }
 }
+
+extension ChantsViewController: TeamTableViewCellDelegate {
+    func didTapPlayback(for team: Team) {
+        teamsViewModel.togglePlayback(for: team)
+        tableView.reloadData()
+    }
+}
+

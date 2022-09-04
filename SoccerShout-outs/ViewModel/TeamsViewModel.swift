@@ -133,4 +133,15 @@ class TeamsViewModel {
              founded: "1877"
             )
     ]
+    //playback switching
+    func togglePlayback(for team: Team) {
+        teams.forEach { item in
+            if item.id == team.id {
+                item.isPlaing.toggle()
+            } else {
+                item.isPlaing = false
+            }
+        }
+    }
 }
+
